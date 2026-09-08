@@ -106,7 +106,8 @@ def imports(module_path, root=None):
     path = Path(module_path).resolve()
     code = compile(path.read_text(encoding="utf-8"), str(path), "exec")
     root = Path(root).resolve() if root else path.parent
-    search = sys.path + [str(root), *(str(d) for d in root.rglob("*") if d.is_dir())]
+    # an installed copy of the analyzed package must never shadow the actual local file being analyzed
+    search = [str(root), *(str(d) for d in root.rglob("*") if d.is_dir())] + sys.path
     names = {n for n in _import_names(code) if n.split(".")[0] not in sys.builtin_module_names}
     specs = (_resolve(n, search) for n in names)
     return sorted({Path(s.origin).as_posix() for s in specs if s and s.origin})
