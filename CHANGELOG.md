@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2 — 2026-09-08
+
+- Fixing bug with shadowing import in path resolution
+
 ## 0.4.1 — 2026-09-07
 
 - Fixing bug with relative paths
