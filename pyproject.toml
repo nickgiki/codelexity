@@ -1,6 +1,6 @@
 [project]
 name = "codelexity"
-version = "0.4.1"
+version = "0.4.2"
 description = "A package that measures code complexity in the age of AI slop."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -48,7 +48,7 @@ dev = [
 ]
 
 [tool.bumpver]
-current_version = "0.4.1"
+current_version = "0.4.2"
 version_pattern = "MAJOR.MINOR.PATCH"
 push = false  # inspect the tag before it leaves the machine
 
