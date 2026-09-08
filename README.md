@@ -101,23 +101,22 @@ The `codelexity.json` containts aggregate analytics for the whole package and pe
 ```json
 {
     "analytics": {
-        "total_lines": 330993,
-        "total_functions": 11740,
-        "total_modules": 862,
-        "total_man_hours": 13956
+        "total_lines": 524,
+        "total_functions": 25,
+        "total_modules": 7,
+        "total_man_hours": 12,
+        "maintainability_index": 43.2,
+        "coupling_score": 0.233,
+        "maintenance_FTEs": 0.0,
+        "maintenance_FTEs_range": [
+            0.0,
+            0.0
+        ]
     },
     "modules": {
-        "conftest.py": {
-            "imports": [
-                "<site-packages>/networkx/__init__.py",
-                "<stdlib>/importlib/metadata/__init__.py",
-                "<stdlib>/os.py",
-                "<stdlib>/warnings.py"
-            ],
-            "total_lines": 262,
-            "empty_lines": 39,
-            "comments": 12,
-            "code_length": 211,
+        "codelexity/fte_calculations.py": {
+            "imports": [],
+            "total_lines": 16,
 ...
         }
 ```
